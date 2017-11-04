@@ -1,0 +1,9 @@
+/node_modules
+/dist
+/.git
+/**/*.psd
+/**/Thumbs.db
+/bower_components
+/.sass-cache
+/.bowerrc
+/desktop.ini
