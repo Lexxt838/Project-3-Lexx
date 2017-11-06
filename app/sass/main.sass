@@ -198,6 +198,8 @@ main
 			.a-but
 				margin: 0
 				width: 100%
+				@media #{.col-12}
+					width: 80%
 				height: 31px
 				position: absolute
 				bottom: 24px
@@ -210,8 +212,11 @@ main
 					font-style: HelveticaNeueCyr
 					text-decoration: none
 					color: #949494
+				// col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4
 				button 
 					margin: 0 -17px 0 30px
+					@media #{.col-12}
+					  margin: 0 -7px 0 30px
 					padding: 0 
 					display: inline
 					padding-bottom: 4px
