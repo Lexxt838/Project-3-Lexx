@@ -31,7 +31,29 @@ h2, .h2 // 30px
 h3, .h3 // 24px
 	font-size: 18px
 	font-weight: bold
+/////////////////////////////////////
 
+@media (min-width: 576px) // col-sm
+	.container
+  	max-width: 540px
+	.a-but button
+		// margin: 0 -17px 0 100px !important
+		// width: 100px !important
+@media (min-width: 768px) // col-md
+	.container
+  	max-width: 720px
+	.a-but button
+		// margin: 0 -7px 0 100px !important
+		// width: 100px !important
+
+@media (min-width: 992px) // col-lg
+	.container
+  	max-width: 960px
+
+@media (min-width: 1200px) // col-xl
+	.container
+		max-width: 1140px
+/////////////////////////////////////
 header
 	background-color: #F8F8F8
 	// nav
@@ -159,22 +181,45 @@ main
 		font-size: 14px
 		font-family: open sans
 		margin-top: -5px
+		border: none
+		background: none
+
 		span
 			font-variant: bold
-			padding-right: 43px
+			padding-right: 80px
+			select
+				border: none
+				background: none
+				color: #6f6f6f
+				padding-left: 10px
+				text-decoration: none
+				option
+					.selopt
+						width: 80%
+				&:focus
+					outline: none
+					background: none
+					outline-offset: 0
 			a 
 				color: #6f6f6f
 				padding-left: 10px
+				text-decoration: none
+			
+
 	.b-col
 		height: 487px
+
 		position: relative
 		background-color: #FFFFFF
 		border: 1px solid #D2DDE1
-		border-radius: 15px
+		border-radius: 35px !important
 		box-shadow: 2px 2px 10px  rgba(0,0,0,0.1)/* Параметры тени */
 		// margin: 0 0
 		padding: 0 0 0 0
 		margin-top: 29px
+		.img-fluid
+			width: 100% !important
+			height: 179px
 		.man-cifer
 			position: absolute
 			top: 12px 
@@ -188,6 +233,7 @@ main
 				font-weight: 500
 		.text-col
 			padding: 12px 15px 0 17px
+			height: 272px
 			h3 
 				text-transform: uppercase
 			P 
@@ -196,10 +242,8 @@ main
 				font-size: 14px
 				font-weight: 500
 			.a-but
-				margin: 0
+				margin-top: 33px
 				width: 100%
-				@media #{.col-12}
-					width: 80%
 				height: 31px
 				position: absolute
 				bottom: 24px
@@ -215,8 +259,6 @@ main
 				// col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4
 				button 
 					margin: 0 -17px 0 30px
-					@media #{.col-12}
-					  margin: 0 -7px 0 30px
 					padding: 0 
 					display: inline
 					padding-bottom: 4px

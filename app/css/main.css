@@ -1,4 +1,14 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-bold.otf");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans/OpenSans-Bold.ttf");
+}
+
 /* Это мой личный файл */
 body {
   font-size: 12px;
@@ -25,6 +35,30 @@ h2, .h2 {
 h3, .h3 {
   font-size: 18px;
   font-weight: bold;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
 
 header {
@@ -202,16 +236,37 @@ main .filter {
   font-size: 14px;
   font-family: open sans;
   margin-top: -5px;
+  border: none;
+  background: none;
 }
 
 main .filter span {
   font-variant: bold;
-  padding-right: 43px;
+  padding-right: 80px;
+}
+
+main .filter span select {
+  border: none;
+  background: none;
+  color: #6f6f6f;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+main .filter span select option .selopt {
+  width: 80%;
+}
+
+main .filter span select:focus {
+  outline: none;
+  background: none;
+  outline-offset: 0;
 }
 
 main .filter span a {
   color: #6f6f6f;
   padding-left: 10px;
+  text-decoration: none;
 }
 
 main .b-col {
@@ -219,10 +274,15 @@ main .b-col {
   position: relative;
   background-color: #FFFFFF;
   border: 1px solid #D2DDE1;
-  border-radius: 15px;
+  border-radius: 35px !important;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   padding: 0 0 0 0;
   margin-top: 29px;
+}
+
+main .b-col .img-fluid {
+  width: 100% !important;
+  height: 179px;
 }
 
 main .b-col .man-cifer {
@@ -244,6 +304,7 @@ main .b-col .man-cifer span {
 
 main .b-col .text-col {
   padding: 12px 15px 0 17px;
+  height: 272px;
 }
 
 main .b-col .text-col h3 {
@@ -258,17 +319,11 @@ main .b-col .text-col P {
 }
 
 main .b-col .text-col .a-but {
-  margin: 0;
+  margin-top: 33px;
   width: 100%;
   height: 31px;
   position: absolute;
   bottom: 24px;
-}
-
-@media col-12 {
-  main .b-col .text-col .a-but {
-    width: 80%;
-  }
 }
 
 main .b-col .text-col .a-but a {
@@ -294,12 +349,6 @@ main .b-col .text-col .a-but button {
   text-decoration: none;
   border: none;
   background-image: linear-gradient(90deg, #ff2850 0%, #00b8ff 100%);
-}
-
-@media col-12 {
-  main .b-col .text-col .a-but button {
-    margin: 0 -7px 0 30px;
-  }
 }
 
 main .b-col .text-col .a-but button a {
